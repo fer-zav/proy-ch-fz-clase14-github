@@ -130,11 +130,6 @@ textarea{
     margin-bottom: 32px;
 }
 /* seccion CLASES */
-.flexContent{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 .copyRFooter{
     font-weight: bolder;
     font-size: smaller;
@@ -144,7 +139,7 @@ textarea{
     display: inline;
 }
 .rowPar{
-    background-color: #8f8f8f;
+    background-color: #cecece;
 }
 .rowImpar{
     background-color: #e2e2e2;
@@ -154,6 +149,16 @@ textarea{
     background-color: transparent;
     border: 0px;
 }
+/* descomentar para que 1) la tabla tenga el header fijo y 2) la tabla hace overflow para scrollear (y asi poder hacer el efecto descripto en el punto anterior)
+.tableFixHead{
+    overflow-y: auto;
+    height: 600px;
+}
+.tableFixHead thead th{
+    position: sticky;
+    top: 0;
+    background: #a0a0a0;
+}/*
 
 /* seccion IDS */
 #titleSection{
@@ -215,7 +220,7 @@ main{
     }
     form div.gridContainer{ /* no muy convencido, pero me overfloweaba muy feo "/ */
         width: 360px;
-    }    
+    }
 }
 @media only screen and (min-width: 768px) {
     nav{
@@ -223,7 +228,6 @@ main{
     }
     .dropdown, #dropdownMenu1{
         width: 100px;
-
     }
     nav ul li{
         display: block;
@@ -261,4 +265,9 @@ main{
         width: 700px;
         height: 700px;
     }
+}
+
+/* seccion OVERWRITES BOOTSTRAP */
+.table-hover tbody tr:hover{
+    background-color: rgba(0,0,0,0.5);
 }

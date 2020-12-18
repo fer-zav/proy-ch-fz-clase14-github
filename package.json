@@ -1,8 +1,8 @@
 {
   "author": "Nombre e Email",
-  "description": "Clase 11 - SASS 1",
+  "description": "Clase 12 - SASS 2",
   "license": "MIT",
-  "name": "clase_11",
+  "name": "clase_12",
   "scripts": {
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "build:css": "node-sass --output-style compressed scss/main.scss styles/main.min.css && npm run css-autoprefixer",

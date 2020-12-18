@@ -1,16 +1,6 @@
 /* orden secciones: TAGS, CLASES, IDS, EFECTOS, RESPONSIVE/media-queries */
 
-$color-blanco: #ffffff;
-$color-gris: #c0c0c0;
-$color-negro: #000000;
-$align-center: center;
-$align-justify: justify;
-$font-impact: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-$ff-arial: Arial, Helvetica, sans-serif;
-$font-oversize: 120%;
-$gal-img-size-sm: 250px;
-$gal-img-size-md: 500px;
-$gal-img-size-lg: 700px;
+@import "vars";
 
 *{ /* reseter */
     font-family: $ff-arial;
@@ -29,28 +19,26 @@ body{
     }
     header{
         text-align: $align-center;
-        a img{ /* aca pdria ir BEM */
+        a img{
             width: 162px;
             height: 126px;
         }
     }
-    section, main{ text-align: $align-center; } /* comprimiendo para mayor legibilidad! */
+    section, main{ text-align: $align-center; }
     footer div{ text-align: $align-center; }
-    h1{ margin: 20px; }
+    h1{ margin: $margin-125rem; }
     p {
-        font-weight: bolder;
-        color: #055550;
-        margin: 16px 0px;
+        margin: 8px 0px;
     }
     a{
         text-decoration-line: none;
-        color: #2f2f2f;
-        font-family: $font-impact;
+        color: $color-negro;
+        font-family: $ff-impact;
         font-weight: lighter;
         letter-spacing: 1px;
-        em{ /* aca pdria ir BEM */
+        em{
             text-transform: uppercase;
-            font-family: $font-impact;
+            font-family: $ff-impact;
         }
     }
     hr{
@@ -59,18 +47,18 @@ body{
     }
     h2, h3{
         color: #311000;
-        margin-top: 20px;
+        margin-top: $margin-125rem;
         line-height: 28px;
     }
     ul, ol{
         margin: 8px auto;
-        padding-left: 20px;
+        padding-left: $margin-125rem;
         text-align: $align-center;
     }
     ul li{
         list-style: none;
         margin-left: 4px;
-        color: #202020;
+        color: $color-negro;
         padding-left: 0px;
     }
     nav{
@@ -80,14 +68,14 @@ body{
             margin: -5px 0px;
             li{
                 height: 25px;
-                & a:hover, & a:focus{ /* aca pdria ir BEM */
+                & a:hover, & a:focus{
                     animation: linkFocus 0.75s ease-in 0s 1 normal none running;
                     background-color: #b0b0b0;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     font-size: $font-oversize;
                     margin: 0;
-                    margin-left: 20px;
+                    margin-left: $margin-125rem;
                     padding: 0;
                     height: 25px;
                     text-decoration-line: none;
@@ -107,7 +95,7 @@ body{
             padding: 3px;
             width: $gal-img-size-sm;
             height: $gal-img-size-sm;
-            &:hover{ /* aca pdria ir BEM */
+            &:hover{
                 border: $color-blanco 3px dotted;
             }
         }
@@ -118,10 +106,10 @@ body{
     }
     td{
         text-align: $align-justify;
-        line-height: 20px;
+        line-height: $margin-125rem;
         ul{
             margin-bottom: 0px;
-            li{ /* aca pdria ir BEM */
+            li{
                 list-style-type: square;
                 color: negro;
                 text-align: $align-justify;
@@ -136,14 +124,11 @@ body{
         }
     }
     form{
-        margin-bottom: 25;
+        margin-bottom: 25px;
         text-align: $align-justify;
         padding: 10px;
         p{
             padding-top: 40px 40px;
-        }
-        div.gridContainer{
-            width: 360px;
         }
     }
     input, select{ margin-bottom: 18px; }
@@ -153,18 +138,23 @@ body{
         justify-self: $align-center;
     }
     textarea{ margin-bottom: 32px; }
-    main{ animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */ }    
+    main{
+        animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
+        /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
+        min-height: calc(100vh - 275px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
+    }
 }
 
 /* seccion CLASES */
 .copyRFooter{
+    font-weight: bolder;
     font-size: smaller;
     text-align: $align-center;
     color: #da5010;
     min-width: 450px;
     display: inline;
 }
-.rowPar{ background-color: #8f8f8f; }
+.rowPar{ background-color: #cecece; }
 .rowImpar{ background-color: #e2e2e2; }
 .dropdown-menu{
     width: 100%;
@@ -179,36 +169,37 @@ body{
     color: #632100;
     font-size: 32px;
 }
-#top{ margin: 8px; }
+#top{ margin-top: 8px; }
 #dropdownMenu1{ width: 100%; }
 
 /* seccion EFECTOS */
-
 @keyframes linkFocus{ 
     0%{background-color: #b0b0b0;}
     50%{background-color: #da5010;}
     100%{background-color: #b0b0b0;}
 }
-@keyframes mainWhoooosh{
-    0%{transform: translateY(-500px); opacity: 0%;}
-    50%{transform: translateY(100px); opacity: 70%;}
-    75%{transform: translateY(-50px); opacity: 85%;}
-    100%{transform: translateY(0px); opacity: 100%;}
+@keyframes mainWhoooosh{ /* salio buenisimo (aunque sea un efecto medio "violento" a la vista jaja, gracias a la union propia, de tutores y un compañero!! */
+  @each $val, $resta in $valResta{
+    #{$val} {transform: translateY($resta); opacity: #{$val};}
+  }
 }
 
 /* seccion RESPONSIVE/media-queries */
 @media only screen and (min-width: 480px) {
     body{
         nav{
-            margin: 0px 0px 130px 0px;
+            margin: 0px 0px 30px 0px;
             ul{
                 display: inline;
-                li a:hover, li a:focus{ /* aca pdria ir BEM */
+                li a:hover, li a:focus{
                     font-size: 100%;
                     margin-left: 0px;
                 }
             }
         }
+    }
+    form div.gridContainer{ /* no muy convencido, pero me overfloweaba muy feo "/ */
+        width: 360px;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -218,9 +209,9 @@ body{
             ul{
                 display: block;
                 text-align: $align-justify;
-                li a:hover, li a:focus{ /* aca pdria ir BEM */
+                li a:hover, li a:focus{
                     font-size: $font-oversize;
-                    margin-left: 20px;
+                    margin-left: $margin-125rem;
                 }
             }
         }
@@ -234,10 +225,13 @@ body{
         display: block;
         font-size: larger;
     }
+    form div.gridContainer{ /* no muy convencido, pero me overfloweaba muy feo "/ */
+        width: auto;
+    }
     #navMenu{
         position: fixed;
         z-index: 2;
-        top: 20px;
+        top: $margin-125rem;
     }
 }
 @media only screen and (min-width: 1024px) {
@@ -246,9 +240,14 @@ body{
             margin: 0px;
             top: -130px;
         }
-        article p img{ /* aca pdria ir BEM */
+        article p img{
             width: $gal-img-size-lg;
             height: $gal-img-size-lg;
         }
     }
+}
+
+/* seccion OVERWRITES BOOTSTRAP */
+.table-hover tbody tr:hover{
+    background-color: rgba(0,0,0,0.5);
 }
