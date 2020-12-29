@@ -3,10 +3,11 @@
     <head>
         <title>Pre-Entrega 03 - Coderhouse Camada 10755 - Materiales</title>
         <meta charset="UTF-8">
-        <meta description="Materiales ofrecidos para impresion 3D">
+        <meta name="description" content="Materiales disponibles y ofrecidos para impresiones en 3D">
+        <meta name="keywords" content="Printing, 3D, Impresion3D, Impresion 3D, Impresion, 3D Printing, Impresora 3D, Imprimundo3D, Impresion 3D Argentina, Impresion 3D Buenos Aires, Servicio Impresion 3D, Presupuesto Impresion 3D, Impresion 3D Reciclable, Impresion 3D Funcional, Impresion 3D Prototipado, Impresion 3D Miniaturas, Impresion 3D Figuras, Impresion 3D Estatuas, Impresion 3D Personajes, Impresion 3D Modelo 3D, Impresion 3D Modelo, Impresion 3D Modelado, Impresion 3D Diseño, Materiales Impresion 3D, Impresion 3D FDM, Filamento Impresion 3D, Impresion 3D SLA, Resina Impresion 3D, Impresion 3D PLA, Impresion 3D ABS, Impresion 3D PETG, Impresion 3D HIPS, Impresion 3D Flex, Impresora 3D Prusa, Impresora 3D Creality, Impresora 3D Anycubic, Impresora 3D Tevo, Impresora 3D Anet, Impresora 3D Formlabs, Impresora 3D Wanhao, Filamento PLA, Filamento ABS, Filamento PETG, Filamento HIPS, Filamento Flex, Filamento 1.75mm, Filamento 2.85mm">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="../styles/bootstrap-4.5.3.min.css" /> <!-- CDN de Bootstrap del CSS -->
-        <link rel="stylesheet" href="../styles/main.min.css" />  <!-- estilos de scss minificado! -->
+        <link rel="stylesheet" type="text/css" href="../styles/main.css" />  <!-- estilos de scss minificado! -->
         <link rel="icon" href="../images/favicon.png">
         <script src="../js/jquery-3.5.1.slim.min.js"></script> <!-- CDN de la librería de Jquery  -->
     </head>
@@ -18,8 +19,8 @@
             </header>
         </div>
 
-        <div class="container"> <!-- bug en este pag especifica, el nav choca (violentamente) contra la tabla. MAS motivo aun para que sea un icono hamburguesa, fuera del container, y que el menu salga del borde de la pantalla-->
-            <nav class="col-xl-2" id="navMenu">  <!-- el menu (sin hamburguesa yet) esta un poco mas! -->
+        <div class="container">
+            <nav class="col-xl-2" id="navMenu"> <!-- el menu (sin hamburguesa yet) esta un poco mas! -->
                 <div class="dropdown d-flex justify-content-center">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -38,159 +39,153 @@
         <div class="container">
             <main>
                 <section>
-                    <article class="col-xl col-lg col-md">
-                        <h2>Comparativa de materiales Disponibles</h2>
-                        <p>Usamos filamento <strong>Grilon3</strong> en la gran mayoria de nuestros trabajos, contando con las siguientes caracteristicas:</p>
-                        <div class="table-responsive tableFixHead">
-                            <table class="table-bordered table-hover"> <!-- min-width: 532px; menos de eso crea barras de scroll ( ademas de verse feo "/ ) --> <!-- me: hay que rediseñar esta tabla; also me: si mi general! -->
-                                <thead>
-                                    <th scope="col">Abreviatura</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">T (°C) Impresion </th>
-                                    <th scope="col">T (°C) Cama</th>
-                                    <th scope="col">Atributos</th>
-                                </thead>
-                                <tbody>
-                                    <tr class="rowPar">
-                                        <td><strong>ABS</strong></td>
-                                        <td>Acrilonitrilo Butadieno Estireno</td>
-                                        <td>240</td>
-                                        <td>90</td>
-                                        <td>
-                                            <ul>
-                                                <li>Piezas Decorativas</li>
-                                                <li>Resistencia a Impactos/Caidas</li>
-                                                <li>Resistencia Mécanica</li>
-                                                <li>Resistencia Térmica</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowImpar">
-                                        <td><strong>PLA</strong></td>
-                                        <td>Ácido Poliláctico</td>
-                                        <td>200</td>
-                                        <td>60</td>
-                                        <td>
-                                            <ul>
-                                                <li>Facilidad de Uso</li>
-                                                <li>Piezas Decorativas</li>
-                                                <li>Prototipado Rápido</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowPar">
-                                        <td><strong>PLA+</strong></td>
-                                        <td>Ácido Poliláctico mejorado</td>
-                                        <td>210</td>
-                                        <td>65</td>
-                                        <td>
-                                            <ul>
-                                                <li><em>(leve)</em> Resistencia Mécanica</li>
-                                                <li><em>(leve)</em> Resistencia Térmica</li>
-                                                <li>Biodegradable</li>
-                                                <li>Facilidad de Uso</li>
-                                                <li>Piezas Decorativas</li>
-                                                <li>Prototipado Rápido</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowImpar">
-                                        <td><strong>HIPS</strong></td>
-                                        <td>Poliestireno de alto impacto</td>
-                                        <td>235</td>
-                                        <td>80</td>
-                                        <td>
-                                            <ul>
-                                                <li>Contacto Alimenticio</li>
-                                                <li>Disoluble</li>
-                                                <li>Resistencia a Impactos/Caidas</li>
-                                                <li>Resistencia Térmica</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowPar">
-                                        <td><strong>Nylon 6</strong></td>
-                                        <td>Poliamida 6</td>
-                                        <td>245</td>
-                                        <td>100</td>
-                                        <td>
-                                            <ul>
-                                                <li>Higroscópico</li>
-                                                <li>Piezas Funcionales</li>
-                                                <li>Piezas Pequeñas</li>
-                                                <li>Resistencia a Impactos/Caidas</li>
-                                                <li>Resistencia Corrosiva</li>
-                                                <li>Resistencia Mécanica</li>
-                                                <li>Resistencia Térmica</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowImpar">
-                                        <td><strong>Nylon 12</strong></td>
-                                        <td>Poliamida 12</td>
-                                        <td>235</td>
-                                        <td>110</td>
-                                        <td>
-                                            <ul>
-                                                <li>Piezas Funcionales</li>
-                                                <li>Piezas Pequeñas</li>
-                                                <li>Resistencia a Impactos/Caidas</li>
-                                                <li>Resistencia Corrosiva</li>
-                                                <li>Resistencia Mécanica</li>
-                                                <li>Resistencia Térmica</li>
-                                                <li>Material de ingenieria:
-                                                    <ol>
-                                                        <li>Aeronáutica</li>
-                                                        <li>Automotriz</li>
-                                                        <li>Espacial</li>
-                                                    </ol>
-                                                </li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowPar">
-                                        <td><strong>SimpliFlex</strong></td>
-                                        <td>Poliuretano modificado</td>
-                                        <td>220</td>
-                                        <td>-</td>
-                                        <td>
-                                            <ul>
-                                                <li>Facilidad de Uso</li>
-                                                <li>Material Flexible</li>
-                                                <li>Resistencia a Elongación</li>
-                                                <li>Resistencia a Torción</li>
-                                                <li>Prototipado de Prendas:
-                                                    <ol>
-                                                        <li>Accesorios</li>
-                                                        <li>Calzados</li>
-                                                        <li>Estampados</li>
-                                                    </ol>
-                                                </li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr class="rowImpar">
-                                        <td><strong>PetG</strong></td>
-                                        <td>Polietileno tereftalato, glicolizado</td>
-                                        <td>230</td>
-                                        <td>65</td>
-                                        <td>
-                                            <ul>
-                                                <li>Derivado del PET (botellas plasticas)</li>
-                                                <li>Contacto Alimenticio</li>
-                                                <li>Resistencia a Impactos/Caidas</li>
-                                                <li>Resistencia Térmica</li>
-                                                <li>Resistencia Mécanica</li>
-                                                <li><em>(leve)</em> Facilidad de Uso</li>
-                                                <li>Material Translúcido</li>
-                                                <li>Piezas Decorativas</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <h2>Materiales Disponibles</h2>
+                    <p>Usamos filamento <strong>Grilon3</strong> en la gran mayoria de nuestros trabajos, contando con las siguientes caracteristicas:</p>
+                    <div class="container row">
+                        <div class="rowPar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/249-large_default/filamento-pla-p-impresoras-3d.jpg" alt="[Filamento PLA]" title="Filamento PLA" />
+                                <div>Abreviatura: <strong>PLA</strong></div>
+                                <div>Nombre: Ácido Poliláctico</div>
+                                <div>T (°C) Impresion: 200</div>
+                                <div>T (°C) Cama: 60</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Facilidad de Uso</span>, 
+                                    <span>Piezas Decorativas</span>, 
+                                    <span>Prototipado Rápido</span>
+                                </div>
+                            </div>
                         </div>
-                    </article>
+                        <div class="rowImpar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/263-large_default/filamento-abs-p-impresoras-3d.jpg" alt="[Filamento ABS]" title="Filamento ABS" />
+                                <div>Abreviatura: <strong>ABS</strong></div>
+                                <div>Nombre: Acrilonitrilo Butadieno Estireno</div>
+                                <div>T (°C) Impresion: 240</div>
+                                <div>T (°C) Cama: 90</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Piezas Decorativas</span>, 
+                                    <span>Resistencia a Impactos/Caidas</span>, 
+                                    <span>Resistencia Mécanica</span>, 
+                                    <span>Resistencia Térmica</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowPar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/288-large_default/filamento-3d-grilon3-plaplus.jpg" alt="[Filamento PLA+]" title="Filamento PLA+" />
+                                <div>Abreviatura: <strong>PLA+</strong></div>
+                                <div>Nombre: Ácido Poliláctico mejorado</div>
+                                <div>T (°C) Impresion: 210</div>
+                                <div>T (°C) Cama: 65</div>
+                                <div>Usos/Propiedaes: 
+                                    <span><em>(leve)</em> Resistencia Mécanica</span>, 
+                                    <span><em>(leve)</em> Resistencia Térmica</span>, 
+                                    <span>Biodegradable</span>, 
+                                    <span>Facilidad de Uso</span>, 
+                                    <span>Piezas Decorativas</span>, 
+                                    <span>Prototipado Rápido</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowImpar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/209-large_default/filamento-3d-grilon-3-hips.jpg" alt="[Filamento HIPS]" title="Filamento HIPS" />
+                                <div>Abreviatura: <strong>HIPS</strong></div>
+                                <div>Nombre: Poliestireno de alto impacto</div>
+                                <div>T (°C) Impresion: 235</div>
+                                <div>T (°C) Cama: 80</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Contacto Alimenticio</span>, 
+                                    <span>Disoluble</span>, 
+                                    <span>Resistencia a Impactos/Caidas</span>, 
+                                    <span>Resistencia Térmica</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowPar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/351-large_default/filamento-pu-p-impresoras-3d.jpg" alt="[Filamento SimpliFlex]" title="Filamento SimpliFlex" />
+                                <div>Abreviatura: <strong>SimpliFlex</strong></div>
+                                <div>Nombre: Poliuretano modificado</div>
+                                <div>T (°C) Impresion: 220</div>
+                                <div>T (°C) Cama: N/A</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Facilidad de Uso</span>, 
+                                    <span>Material Flexible</span>, 
+                                    <span>Resistencia a Elongación</span>, 
+                                    <span>Resistencia a Torción</span>, 
+                                    <span>Prototipado de Prendas:
+                                    <div>
+                                        <span>Accesorios</span>, 
+                                        <span>Calzados</span>, 
+                                        <span>Estampados</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowImpar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/269-large_default/flamento-nylon-p-impresoras-3d.jpg" alt="[Filamento Nylon 6]" title="Filamento Nylon 6" />
+                                <div>Abreviatura: <strong>Nylon 6</strong></div>
+                                <div>Nombre: Poliamida 6</div>
+                                <div>T (°C) Impresion: 245</div>
+                                <div>T (°C) Cama: 100</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Higroscópico</span>, 
+                                    <span>Piezas Funcionales</span>, 
+                                    <span>Piezas Pequeñas</span>, 
+                                    <span>Resistencia a Impactos/Caidas</span>, 
+                                    <span>Resistencia Corrosiva</span>, 
+                                    <span>Resistencia Mécanica</span>, 
+                                    <span>Resistencia Térmica</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowPar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/289-large_default/filamento-3d-grilon-3-nylon12.jpg" alt="[Filamento Nylon 12]" title="Filamento Nylon 12" />
+                                <div>Abreviatura: <strong>Nylon 12</strong></div>
+                                <div>Nombre: Poliamida 12</div>
+                                <div>T (°C) Impresion: 235</div>
+                                <div>T (°C) Cama: 110</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Piezas Funcionales</span>, 
+                                    <span>Piezas Pequeñas</span>, 
+                                    <span>Resistencia a Impactos/Caidas</span>, 
+                                    <span>Resistencia Corrosiva</span>, 
+                                    <span>Resistencia Mécanica</span>, 
+                                    <span>Resistencia Térmica</span>, 
+                                    <span>Material de ingenieria:
+                                    <div>
+                                        <span>Aeronáutica</span>, 
+                                        <span>Automotriz</span>, 
+                                        <span>Espacial</span>
+                                    </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowImpar darkHover col-xl-4 col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                            <div>
+                                <img class="imgFilament" src="http://www.nth.com.ar/321-large_default/filamento-3d-grilon3-petg.jpg" alt="[Filamento PetG]" title="Filamento PetG" />
+                                <div>Abreviatura: <strong>PetG</strong></div>
+                                <div>Nombre: Polietileno tereftalato, glicolizado</div>
+                                <div>T (°C) Impresion: 230</div>
+                                <div>T (°C) Cama: 65</div>
+                                <div>Usos/Propiedaes: 
+                                    <span>Derivado del PET (botellas plasticas)</span>, 
+                                    <span>Contacto Alimenticio</span>, 
+                                    <span>Resistencia a Impactos/Caidas</span>, 
+                                    <span>Resistencia Térmica</span>, 
+                                    <span>Resistencia Mécanica</span>, 
+                                    <span><em>(leve)</em> Facilidad de Uso</span>, 
+                                    <span>Material Translúcido</span>, 
+                                    <span>Piezas Decorativas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer id="bot">

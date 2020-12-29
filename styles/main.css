@@ -18,27 +18,26 @@ img{
 header, section, main{
     text-align: center;
 }
-footer{
+/*footer{
     height: 46px;
-}
+}*/
 footer div{
     text-align: center;
 }
 h1{
     margin: 20px;
 }
-h2, h3{
+h3{
     color: #311000;
     margin-top: 20px;
     line-height: 28px;
 }
 p {
-    color: #055550;
-    margin: 16px 0px 8px 0px;
+    margin: 8px 0px
 }
 a{
     text-decoration-line: none;
-    color: #2f2f2f;
+    color: #000000;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: lighter;
     letter-spacing: 1px;
@@ -63,7 +62,7 @@ ul, ol{
 ul li{
     list-style: none;
     margin-left: 4px;
-    color: #202020;
+    color: #000000;
     padding-left: 0px;
 }
 ol li{
@@ -72,7 +71,7 @@ ol li{
     font-weight: 600;
 }
 nav{
-    margin: 0px 0px 120px 0px;
+    margin: 0px 0px 130px 0px;
 }
 nav ul{
     padding-left: 0px;
@@ -84,6 +83,11 @@ nav ul li{
 header img{
     border-radius: 35px;
     border: #000000 double 5px;
+}
+main{
+    animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
+    /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
+    min-height: calc(100vh - 275px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
 }
 article p {
     padding: 16px 10px;
@@ -108,11 +112,11 @@ td ul{
 }
 td ul li{
     list-style-type: square;
-    color: #202020;
+    color: #000000;
     text-align: justify;
 }
 form{
-    margin-bottom: 25;
+    margin-bottom: 25px;
     text-align: justify;
     padding: 10px;
 }
@@ -121,6 +125,9 @@ form p{
 }
 input, select{
     margin-bottom: 18px;
+}
+input[type=text], input[type=email], textarea{
+    color: #da5010 !important;
 }
 input[type=reset]{
     width: 200px;
@@ -140,14 +147,42 @@ textarea{
 }
 .rowPar{
     background-color: #cecece;
+    text-align: right;
+    max-width: 600px;
 }
 .rowImpar{
     background-color: #e2e2e2;
+    text-align: left;
+    max-width: 600px;
 }
 .dropdown-menu{
     width: 100%;
     background-color: transparent;
     border: 0px;
+}
+.squareLinks{
+    height: 250px;
+    margin: auto 3px 3px 3px;
+    margin-top: 30px;
+    background-color: rgba(218, 80, 16, 0.1);
+    border-radius: 10%;
+    display: grid;
+    align-content: center;
+    text-decoration: none;
+    /*width: 90%;*/
+    max-width: 300px;
+}
+.darkHover{
+    /*background-color: rgba(0,0,0,0.6);
+    height: auto;*/
+    margin: 0 auto 16px;
+    border-radius: 0px 0px 40px 40px;
+    padding-bottom: 10px;
+}
+.imgFilament{
+    width: 200px;
+    min-width: 200px;
+    min-height: 200px;
 }
 /* descomentar para que 1) la tabla tenga el header fijo y 2) la tabla hace overflow para scrollear (y asi poder hacer el efecto descripto en el punto anterior)
 .tableFixHead{
@@ -178,6 +213,17 @@ textarea{
 article p img:hover{
     border: #FFFFFF 3px dotted;
 }
+.darkHover:hover{
+    background-color: rgba(218, 80, 16, 0.75);
+}
+.darkHover div:hover{
+    background-color: unset;
+}
+.squareLinks:hover, .squareLinks:focus{
+    background-color: rgba(218, 80, 16, 0.4);
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
 @keyframes linkFocus{ 
     0%{background-color: #b0b0b0;}
     50%{background-color: #da5010;}
@@ -201,11 +247,6 @@ li a:hover, li a:focus{
     75%{transform: translateY(-50px); opacity: 75%;}
     100%{transform: translateY(0px); opacity: 100%;}
 }
-main{
-    animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
-    /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
-    min-height: calc(100vh - 275px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
-}
 /* seccion RESPONSIVE/media-queries */
 @media only screen and (min-width: 480px) { /* no es un breakpoint oficial, pero da mas control sobre los tamaños! */
     nav{
@@ -220,6 +261,9 @@ main{
     }
     form div.gridContainer{ /* no muy convencido, pero me overfloweaba muy feo "/ */
         width: 360px;
+    }
+    .imgFilament{
+        width: 300px;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -254,7 +298,9 @@ main{
         position: fixed; /* cada vez mejor, ahora con la animacion de dropdown, se podria hacer que salga del borde de la pantalla el menu (*TODO*). por ahora me convence jaja */
         z-index: 2; /* previene bugs con la tabla, que pasabaa tener mayor "prioridad" que el menu de navegacion! */
         top: 20px;
+        left: 0px;
     }
+    
 }
 @media only screen and (min-width: 1024px) {
     nav{
@@ -265,9 +311,14 @@ main{
         width: 700px;
         height: 700px;
     }
+    .imgFilament{
+        width: 350px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .imgFilament{
+        width: auto;
+    }
 }
 
 /* seccion OVERWRITES BOOTSTRAP */
-.table-hover tbody tr:hover{
-    background-color: rgba(0,0,0,0.5);
-}

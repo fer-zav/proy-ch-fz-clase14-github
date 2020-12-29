@@ -3,10 +3,13 @@
     <head>
         <title>Pre-Entrega 03 - Coderhouse Camada 10755 - Home Page</title>
         <meta charset="UTF-8">
-        <meta description="Inicio del sitio">
+        <meta name="description" content="Página de Inicio">
+        <meta name="keywords" content="Printing, 3D, Impresion3D, Impresion 3D, Impresion, 3D Printing, Impresora 3D, Imprimundo3D, Impresion 3D Argentina, Impresion 3D Buenos Aires, Servicio Impresion 3D, Presupuesto Impresion 3D, Impresion 3D Reciclable, Impresion 3D Funcional, Impresion 3D Prototipado, Impresion 3D Miniaturas, Impresion 3D Figuras, Impresion 3D Estatuas, Impresion 3D Personajes, Impresion 3D Modelo 3D, Impresion 3D Modelo, Impresion 3D Modelado, Impresion 3D Diseño, Materiales Impresion 3D, Impresion 3D FDM, Filamento Impresion 3D, Impresion 3D SLA, Resina Impresion 3D, Impresion 3D PLA, Impresion 3D ABS, Impresion 3D PETG, Impresion 3D HIPS, Impresion 3D Flex, Impresora 3D Prusa, Impresora 3D Creality, Impresora 3D Anycubic, Impresora 3D Tevo, Impresora 3D Anet, Impresora 3D Formlabs, Impresora 3D Wanhao, Pagina de Inicio, Pagina Principal, Landing Page, Home Page, Inicio, Principal">
+        <!-- y si esas no estan bien:
+        printing, 3D, Impresion3D, impresion 3D, impresion, 3D printing, impresora 3D, imprimundo3D, argentina, buenos aires, servicio, presupuesto, reciclable, funcional, prototipado, miniaturas, figuras, estatuas, personajes, modelo 3D, modelo, modelado, diseño, materiales, FDM, filamento, SLA, resina, PLA, ABS, PETG, HIPS, Flex, Prusa, Creality, Anycubic, Tevo, Anet, FormLabs, Wanhao,  -->
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.5.3.min.css" /> <!-- CDN de Bootstrap del CSS -->
-        <link rel="stylesheet" href="styles/main.min.css" /> <!-- estilos de scss minificado! -->
+        <link rel="stylesheet" type="text/css" href="styles/main.css" /> <!-- estilos de scss minificado! -->
         <link rel="icon" href="images/favicon.png">
         <script src="js/jquery-3.5.1.slim.min.js"></script> <!-- CDN de la librería de Jquery  -->
     </head>
@@ -37,31 +40,19 @@
 
         <div class="container">
             <main>
-                <section class="row">
-                    <article class="col-xl col-lg col-md">
-                        <h2>Inicio (1)</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit nec ac, fermentum cubilia dui arcu mus sollicitudin eget sodales et euismod, potenti risus posuere quisque mi nascetur nisl id.<br />
-                            Quisque ac malesuada luctus sed in aptent nisi hendrerit aliquam, ultricies tincidunt a cursus purus vestibulum nibh lobortis etiam, dapibus aliquet semper sociosqu augue fringilla cras iaculis.
-                        </p>
-                    </article>
-                    <article class="col-xl col-lg col-md">
-                        <h2>Continuacion (2)</h2>
-                        <p>
-                            Dictum non suscipit nibh leo dis eros egestas orci netus condimentum tristique viverra, interdum rutrum elementum dui magna vel himenaeos ligula lobortis hendrerit.<br />
-                            Himenaeos cubilia nostra lacinia nisl leo, quisque est sem gravida accumsan conubia, massa ac scelerisque eu.<br />
-                            Auctor justo nam enim bibendum tortor proin semper morbi, non magnis convallis euismod ultricies in mauris mus, sapien nec feugiat aliquet litora quam ut.
-                        </p>
-                    </article>
-                    <article class="col-xl col-lg col-md">
-                        <h2>Desenlace (3)</h2>
-                        <p>
-                            Eleifend felis non morbi euismod ridiculus nostra luctus dapibus praesent orci sapien vestibulum, magnis vulputate placerat nunc cras pulvinar accumsan bibendum parturient metus mus.<br/>
-                            Magnis convallis tincidunt tristique placerat eleifend dignissim senectus sodales integer aliquet, scelerisque potenti malesuada pretium nisi ac euismod egestas.<br/>
-                            Tristique ridiculus a bibendum sapien per dis sem, facilisi commodo sociosqu malesuada aliquam aenean, nulla cubilia netus curabitur feugiat purus.<br/>
-                            Libero posuere mauris litora sagittis imperdiet potenti, rutrum sed torquent iaculis et malesuada, pharetra sodales tristique varius tempor.
-                        </p>
-                    </article>
+                <section class="row justify-content-center">
+                    <a href="pages/historia.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
+                        <h2>Quienes Somos</h2><!-- descript: "Te invitamos a conocer los origines del emprendimiento" -->
+                    </a>
+                    <a href="pages/trabajos.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
+                        <h2>Trabajos</h2> <!-- descript: "Breve galeria con ejemplos de lo que otros clientes pidieron" -->
+                    </a>
+                    <a href="pages/materiales.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
+                        <h2>Materiales</h2> <!-- descript: "Informacion para que sepas cual es el material mas conveniente para el proyecto que queres!"" -->
+                    </a>
+                    <a href="pages/contacto.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
+                        <h2>Contacto</h2> <!-- descript: "Queremos conocerte y esperamos que quieras conocernos!" -->
+                    </a>
                 </section>
             </main>
             <footer id="bot">
