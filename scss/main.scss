@@ -134,7 +134,7 @@ body{
     select{ margin-bottom: 18px; }
     input{
         &[type=text], &[type=email]{ color: $color-base-orange; }
-        &[type=email]{
+        &[type=reset]{
             width: 200px;
             justify-self: $align-center;
         }
